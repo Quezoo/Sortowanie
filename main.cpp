@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include <algorithm>
 using namespace std;
 
 int liczba[3];
@@ -10,8 +11,11 @@ int main() {
     Sleep(500);
 
     cout << "Podaj liczby: " << endl;
-    cin >> liczba[1]>>liczba[2]>>liczba[3];
+    cin >> liczba[0]>>liczba[1]>>liczba[2];
     cout << "sortowanie od najmniejszej do najwiekszej" << endl;
-    for(int i=liczba[10]; i<3; i++)
-        cout << liczba[i] << '\n';
+    sort(liczba, liczba + 3);
+    for(int i=0; i<3; i++)
+    {
+        cout << liczba[i] << endl;
+    }
 }
